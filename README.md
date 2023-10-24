@@ -15,7 +15,7 @@ Especially the objectDetector_Yolo.
 - Deepstream: 6.2
 
 ## Prerequisites:
-1. Please follow the [TensorRT's](https://github.com/NVIDIA/TensorRT/tree/release/8.6/samples/python/detectron2) github repo on how to build onnx for mask_rcnn_R_50_FPN_3x model.
+1. Please follow the [TensorRT's](https://github.com/NVIDIA/TensorRT/tree/release/8.6/samples/python/detectron2) github repo on how to build onnx for mask_rcnn_R_50_FPN_3x model and then edit it for faster_rcnn model. Its very similar so it should be easy.
 
 2. Please build the tensorrt engine using the ./trtexec tool since my deepstream example cannot build the engine yet.
 
@@ -25,6 +25,7 @@ Especially the objectDetector_Yolo.
 ```
 cd ~/
 git clone https://github.com/RajUpadhyay/Detectron2-Deepstream.git
+git checkout frcnn
 ```
 ```
 cd Detectron2-Deepstream/
