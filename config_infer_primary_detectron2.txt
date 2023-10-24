@@ -1,7 +1,7 @@
 [property]
 gpu-id=0
 model-color-format=0
-onnx-file=converted.onnx
+onnx-file=faster_converted.onnx
 model-engine-file=engine_fp16.engine
 labelfile-path=labels.txt
 ## 0=FP32, 1=INT8, 2=FP16 mode
@@ -10,16 +10,12 @@ batch-size=1
 num-detected-classes=80
 interval=0
 gie-unique-id=1
-cluster-mode=4
-network-type=3
+cluster-mode=2
 maintain-aspect-ratio=1
 symmetric-padding=1
-parse-bbox-instance-mask-func-name=NvDsInferParseCustomDetectron2
-custom-lib-path=nvdsinfer_custom_impl_detectron2_seg/libnvdsinfer_custom_impl_detectron2_seg.so
-output-instance-mask=1
-segmentation-threshold=0.2
-
+parse-bbox-func-name=NvDsInferParseCustomDetectron2
+custom-lib-path=custom_bbox_parser/libnvdsinfer_custom_bbox_detectron2.so
 
 [class-attrs-all]
-pre-cluster-threshold=0.25
-topk=100
+pre-cluster-threshold=0.90
+topk=300
