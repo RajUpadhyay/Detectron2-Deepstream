@@ -36,7 +36,7 @@ Run using the deepstream-config or gst-pipeline
 deepstream-app -c deepstream_app_config.txt
 ```
 ```
-GST_DEBUG=3 gst-launch-1.0 uridecodebin3 uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_qHD.mp4 ! nvstreammux0.sink_0 nvstreammux name=nvstreammux0 batch-size=1 batched-push-timeout=40000 live-source=False width=1920 height=960 ! nvinfer config-file-path=config_infer_primary_detectron2.txt ! nvvidconv ! nvdsosd ! nvvidconv ! fpsdisplaysink sync=0
+GST_DEBUG=3 gst-launch-1.0 uridecodebin3 uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_qHD.mp4 ! nvstreammux0.sink_0 nvstreammux name=nvstreammux0 batch-size=1 batched-push-timeout=40000 live-source=False width=1920 height=960 ! nvinfer config-file-path=config_infer_primary_detectron2.txt ! nvvidconv ! nvdsosd display-mask=1 ! nvvidconv ! fpsdisplaysink sync=0
 ```
 
 ## Note:
