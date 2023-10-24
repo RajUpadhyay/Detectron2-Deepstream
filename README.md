@@ -1,19 +1,3 @@
-# Detectron2-Deepstream
-A sample of how to use detectron2 with deepstream. 
-I have implemented the deepstream with both mask_rcnn and faster_rcnn.
-
-## Reference:
-I have taken reference from the official deepstream documentation.
-Especially the objectDetector_Yolo.
-
-## System Environment:
-- Jetson AGX ORIN (Ubuntu 20.04 focal)
-- Jetpack - 5.1.1 [L4t 35.3.1]
-- CUDA: 11.4.315
-- cuDNN : 8.6.0.166
-- TensorRT: 8.5.2.2
-- Deepstream: 6.2
-
 ## Prerequisites:
 1. Please follow the [TensorRT's](https://github.com/NVIDIA/TensorRT/tree/release/8.6/samples/python/detectron2) github repo on how to build onnx for mask_rcnn_R_50_FPN_3x model and then edit it for faster_rcnn model. Its very similar so it should be easy.
 
@@ -23,13 +7,9 @@ Especially the objectDetector_Yolo.
 
 ## Implement Deepstream:
 ```
-cd ~/
-git clone https://github.com/RajUpadhyay/Detectron2-Deepstream.git
-git checkout frcnn
-```
-```
 cd Detectron2-Deepstream/
-make -C nvdsinfer_custom_impl_detectron2_seg/
+git checkout frcnn
+make -C custom_bbox_parser/
 ```
 
 Run using the deepstream-config or gst-pipeline
