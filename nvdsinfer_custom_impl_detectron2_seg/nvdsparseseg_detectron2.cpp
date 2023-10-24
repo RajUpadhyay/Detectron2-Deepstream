@@ -85,9 +85,6 @@ extern "C" bool NvDsInferParseCustomDetectron2(
         if (scores_buffer[i] < 0.8)
             continue;
 
-        if (classes_buffer[i] != 0)
-            continue;
-
         NvDsInferInstanceMaskInfo object;
         object.classId = classes_buffer[i];
         object.detectionConfidence = scores_buffer[i];
