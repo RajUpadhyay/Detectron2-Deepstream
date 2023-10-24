@@ -7,12 +7,12 @@ I have taken reference from the official deepstream documentation.
 Especially the objectDetector_Yolo.
 
 ## System Environment:
-Jetson AGX ORIN (Ubuntu 20.04 focal)
-Jetpack - 5.1.1 [L4t 35.3.1]
-CUDA: 11.4.315
-cuDNN : 8.6.0.166
-TensorRT: 8.5.2.2
-Deepstream: 6.2
+- Jetson AGX ORIN (Ubuntu 20.04 focal)
+- Jetpack - 5.1.1 [L4t 35.3.1]
+- CUDA: 11.4.315
+- cuDNN : 8.6.0.166
+- TensorRT: 8.5.2.2
+- Deepstream: 6.2
 
 ## Prerequisites:
 1. Please follow the [TensorRT's](https://github.com/NVIDIA/TensorRT/tree/release/8.6/samples/python/detectron2) github repo on how to build onnx for mask_rcnn_R_50_FPN_3x model.
